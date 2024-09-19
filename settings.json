@@ -1,0 +1,54 @@
+{
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-haiku-20240307"
+    },
+    "version": "2"
+  },
+  "lsp": {
+    "javascript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "languages": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact"
+      ]
+    },
+    "ruby": {
+      "command": "solargraph",
+      "args": ["stdio"],
+      "languages": ["ruby"]
+    }
+  },
+  "linting": {
+    "eslint": {
+      "command": "eslint",
+      "args": ["--stdin", "--stdin-filename", "${file}"],
+      "rootPatterns": [".eslintrc.js", "package.json"],
+      "languages": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ]
+    },
+    "rubocop": {
+      "command": "rubocop",
+      "args": ["--stdin", "${file}"],
+      "rootPatterns": [".rubocop.yml", "Gemfile"],
+      "languages": ["ruby"]
+    }
+  },
+  "theme": "Gruvbox Dark Soft",
+  "editor": {
+    "fontFamily": "Fira Code",
+    "fontSize": 14,
+    "tabSize": 2,
+    "insertSpaces": true,
+    "autoIndent": true,
+    "formatOnSave": true
+  }
+}
