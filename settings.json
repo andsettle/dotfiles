@@ -16,11 +16,6 @@
         "javascriptreact",
         "typescriptreact"
       ]
-    },
-    "ruby": {
-      "command": "solargraph",
-      "args": ["stdio"],
-      "languages": ["ruby"]
     }
   },
   "linting": {
@@ -42,7 +37,7 @@
       "languages": ["ruby"]
     }
   },
-  "theme": "Gruvbox Dark Soft",
+  "theme": "Catppuccin Mocha",
   "editor": {
     "fontFamily": "Fira Code",
     "fontSize": 14,
