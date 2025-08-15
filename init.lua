@@ -107,7 +107,15 @@ require('nvim-tree').setup({
 -- nvim-cmp setup
 local cmp = require'cmp'
 cmp.setup({
-  -- Complete configuration here
+  sources = {
+    { name = 'nvim_lsp' },
+  },
+  mapping = {
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-Space>'] = cmp.mapping.complete(),
+  }
 })
 
 -- LSP setup for Ruby using solargraph with diagnostics enabled
@@ -199,7 +207,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 
 -- Treesitter setup
 require'nvim-treesitter.configs'.setup{
-  ensure_installed = "all", -- or specify languages you use
+  ensure_installed = { "lua", "vim", "javascript", "typescript", "ruby", "html", "css", "json", "yaml", "markdown" },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
